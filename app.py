@@ -112,10 +112,6 @@ def run_app() -> None:
                 pdfs = [(f.name, f.read()) for f in uploaded]
 
                 # Use sidebar chunking values
-                splitter = RecursiveCharacterTextSplitter(
-                    chunk_size=chunk_size,
-                    chunk_overlap=chunk_overlap,
-                )
 
                 docs = build_docs_from_pdfs(pdfs)
 
